@@ -6,4 +6,7 @@
   <select id="selectBlog" resultType="com.tiamaes.demo.model.User">
     select * from consume where name = #{name}
   </select>
+  <insert id="insertUser" parameterType="com.tiamaes.demo.model.User">
+  	insert into consume (id,name,password) value(#{id},#{name},#{password})
+  </insert>
 </mapper>
