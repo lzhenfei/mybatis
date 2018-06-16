@@ -2,17 +2,14 @@ package com.tiamaes.demo;
 
 public class User {
 
-	private int fleet_no;
+	private int id;
 	private String name;
-	private String contact;
-	private String telephone;
-	private int parentId;
-	private String remark;
-	public int getFleet_no() {
-		return fleet_no;
+	private String password;
+	public int getId() {
+		return id;
 	}
-	public void setFleet_no(int fleet_no) {
-		this.fleet_no = fleet_no;
+	public void setId(int id) {
+		this.id = id;
 	}
 	public String getName() {
 		return name;
@@ -20,35 +17,15 @@ public class User {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getContact() {
-		return contact;
+	public String getPassword() {
+		return password;
 	}
-	public void setContact(String contact) {
-		this.contact = contact;
-	}
-	public String getTelephone() {
-		return telephone;
-	}
-	public void setTelephone(String telephone) {
-		this.telephone = telephone;
-	}
-	public int getParentId() {
-		return parentId;
-	}
-	public void setParentId(int parentId) {
-		this.parentId = parentId;
-	}
-	public String getRemark() {
-		return remark;
-	}
-	public void setRemark(String remark) {
-		this.remark = remark;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	@Override
 	public String toString() {
-		return "User [fleet_no=" + fleet_no + ", name=" + name + ", contact=" + contact + ", telephone=" + telephone
-				+ ", parentId=" + parentId + ", remark=" + remark + "]";
+		return "User [id=" + id + ", name=" + name + ", password=" + password + "]";
 	}
-	
 	
 }
