@@ -3,7 +3,7 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.tiamaes.demo.mapper.UserMapper">
-  <select id="selectBlog" resultType="com.tiamaes.demo.User">
+  <select id="selectBlog" resultType="com.tiamaes.demo.model.User">
     select * from consume where name = #{name}
   </select>
 </mapper>

@@ -1,4 +1,4 @@
-package com.tiamaes.demo;
+package com.tiamaes.demo.model;
 
 public class User {
 
