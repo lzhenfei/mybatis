@@ -1,18 +1,19 @@
 package com.tiamaes.demo;
 
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.tiamaes.demo.model.User;
 import com.tiamaes.demo.service.UserService;
-
+@SpringBootApplication
+@MapperScan("com.tiamaes.demo.mapper")
 public class Application {
 	
 
 	public static void main(String[] args) {
-		ApplicationContext application = new ClassPathXmlApplicationContext("applicationContext.xml");
-		UserService userService = (UserService) application.getBean("userService");
-		User user = userService.findUser("lisi");
-		System.out.println(user);
+		SpringApplication.run(Application.class, args);
 	}
 }
