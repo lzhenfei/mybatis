@@ -10,9 +10,11 @@
         <module name="config" />
         <module name="eureka" />
         <module name="export" />
-        <module name="hello" />
         <module name="ribbon" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="hello" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,6 +1,4 @@
-package com.lzf.hello.model;
-
-import java.util.Date;
+package com.lzf.export.model;
 
 public class User {
     private String subsId;

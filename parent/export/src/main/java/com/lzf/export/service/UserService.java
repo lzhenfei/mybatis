@@ -1,12 +1,9 @@
-package com.lzf.hello.service;
+package com.lzf.export.service;
 
-import com.lzf.hello.dao.UserDao;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.lzf.export.dao.UserDao;
 import org.springframework.stereotype.Service;
-import org.springframework.util.CollectionUtils;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 

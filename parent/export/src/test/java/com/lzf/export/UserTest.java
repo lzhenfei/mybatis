@@ -1,7 +1,7 @@
-package com.lzf.hello;
+package com.lzf.export;
 
-import com.lzf.hello.service.UserService;
-import com.lzf.hello.util.ExcelUtil;
+import com.lzf.export.service.UserService;
+import com.lzf.export.util.ExcelUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ public class UserTest {
     public void test1(){
         List<String> list =service.getSubsIds();
         System.out.println(list.size());
-        ExcelUtil.writerToExcel(list);
+        //ExcelUtil.writerToExcel(list);
     }
     @Test
     public void test2(){
