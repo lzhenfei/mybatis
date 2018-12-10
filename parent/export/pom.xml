@@ -36,5 +36,10 @@
 			<version>1.4.6.RELEASE</version>
 		</dependency>
 
+		<dependency>
+			<groupId>com.lzf</groupId>
+			<artifactId>common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 </project>

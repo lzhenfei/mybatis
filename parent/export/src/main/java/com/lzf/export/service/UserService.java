@@ -1,6 +1,7 @@
 package com.lzf.export.service;
 
 import com.lzf.export.dao.UserDao;
+import com.lzf.export.model.User;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -13,6 +14,7 @@ public class UserService {
     private UserDao dao;
     public List<String> getSubsIds(){
         //List<Long> subsId = dao.getSubsId();
+        User user = new User();
         List<String> acctIds = dao.getSubsIdByAcctinfo();
         //List<String> subsId = dao.getacctinfo2ById();
         Iterator<String> it = acctIds.iterator();
