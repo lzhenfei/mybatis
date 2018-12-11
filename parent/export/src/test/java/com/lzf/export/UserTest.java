@@ -1,5 +1,6 @@
 package com.lzf.export;
 
+import com.lzf.export.model.User;
 import com.lzf.export.service.UserService;
 import com.lzf.export.util.ExcelUtil;
 import org.junit.Test;
@@ -19,10 +20,8 @@ public class UserTest {
     @Autowired
     private UserService service;
     @Test
-    public void test1(){
-        List<String> list =service.getSubsIds();
-        System.out.println(list.size());
-        //ExcelUtil.writerToExcel(list);
+    public void test1() throws IllegalAccessException {
+        service.exportInfo();
     }
     @Test
     public void test2(){
@@ -42,5 +41,16 @@ public class UserTest {
         for(String s:list){
             System.out.println(s);
         }
+    }
+    @Test
+    public void test3(){
+        User user = new User();
+        ExcelUtil.write(user.getClass());
+    }
+    @Test
+    public void test4(){
+        int count=0;
+        count+=500;
+        System.out.println(count);
     }
 }

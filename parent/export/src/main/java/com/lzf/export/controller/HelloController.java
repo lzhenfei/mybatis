@@ -9,12 +9,12 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class HelloController {
 
-    @Autowired
-    private RestTemplate restTemplate;
-
-    @RequestMapping(value="/hello",method = RequestMethod.GET)
-    public String hello(){
-        String result = restTemplate.getForObject("http://HELLO-SERVICE/hello",String.class);
-        return result;
-    }
+//    @Autowired
+//    private RestTemplate restTemplate;
+//
+//    @RequestMapping(value="/hello",method = RequestMethod.GET)
+//    public String hello(){
+//        String result = restTemplate.getForObject("http://HELLO-SERVICE/hello",String.class);
+//        return result;
+//    }
 }

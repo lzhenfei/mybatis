@@ -2,6 +2,8 @@ package com.lzf.export.service;
 
 import com.lzf.export.dao.UserDao;
 import com.lzf.export.model.User;
+import com.lzf.export.util.ExportInterface;
+import com.lzf.export.util.ExportTask;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -13,22 +15,25 @@ public class UserService {
     @Resource
     private UserDao dao;
     public List<String> getSubsIds(){
-        //List<Long> subsId = dao.getSubsId();
         User user = new User();
         List<String> acctIds = dao.getSubsIdByAcctinfo();
-        //List<String> subsId = dao.getacctinfo2ById();
         Iterator<String> it = acctIds.iterator();
-//        while (it.hasNext()){
-//            String id = it.next();
-//            List<String> acctid = dao.getSubsIdById(id);
-//            if(!CollectionUtils.isEmpty(acctid)){
-//                it.remove();
-//            }
-//        }
-
-        //List<Long> list = new ArrayList<Long>();
-        //acctIds.removeAll(subsId);
-        //List<Long> lists = acctIds.remove(subsId);
         return acctIds;
+    }
+    public void exportInfo() throws IllegalAccessException {
+
+        int count = dao.getCount();
+        if(count>0){
+            ExportInterface exportInterface = new ExportInterface<User>() {
+
+                @Override
+                public List<User> queryList(Integer startRow, Integer endRow) {
+                    List<User> lists = dao.getUser(startRow,endRow);
+                    return lists;
+                }
+            };
+            ExportTask task = new ExportTask(count,exportInterface,User.class);
+            task.execute();
+        }
     }
 }
